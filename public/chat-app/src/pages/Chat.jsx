@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Chat(){
-    return <></>
+    return <>Chat Section</>
 }
