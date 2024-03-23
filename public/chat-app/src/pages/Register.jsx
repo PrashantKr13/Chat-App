@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.svg";
@@ -24,18 +24,24 @@ export default function Register() {
         draggable: true,
         theme: "dark"
     };
+    useEffect(()=>{
+        if(localStorage.getItem("chat-app-user")){
+            navigate("/");
+        }
+    },[])
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (handleValidation()) {
-            const { username, email, password, confirmpassword } = values;
+            const { username, email, password } = values;
             const { data } = await axios.post(registerRoute, {
                 username, email, password
             });
             if(data.status === false){
                 toast.error(data.msg, toastOptions);
-            }else{
-                localStorage.setItem("chat-app-user", JSON.stringify(data.user));
+            }if(data.status === true){
+                console.log(`data.user=${data.user}`);
+                localStorage.setItem("chat-app-user", JSON.stringify(data.newUser));
                 navigate("/");
             }
         }
@@ -65,7 +71,7 @@ export default function Register() {
 
     return <>
         <FormContainer>
-            <form onSubmit={(event) => { handleSubmit(event) }}>
+            <form onSubmit={(event) =>  handleSubmit(event) }>
                 <div className="brand">
                     <img src={Logo} alt="logo image" />
                     <h1>Snappy</h1>
@@ -131,6 +137,7 @@ const FormContainer = styled.div`
         color: white;
         padding: 1rem 2rem;
         border: none;
+        border-radius: 0.4rem;
         cursor: pointer;
         font-weight: bold;
         font-size: 1rem;
