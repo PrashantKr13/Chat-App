@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+import Logo from "../assets/logoim.png";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -74,7 +74,7 @@ export default function Register() {
             <form onSubmit={(event) =>  handleSubmit(event) }>
                 <div className="brand">
                     <img src={Logo} alt="logo image" />
-                    <h1>Snappy</h1>
+                    <h1>PineTalk</h1>
                 </div>
                 <input type="text" name="username" placeholder="Username" onChange={(e) => handleChange(e)} />
                 <input type="text" name="email" placeholder="E-mail" onChange={(e) => handleChange(e)} />
@@ -104,12 +104,13 @@ const FormContainer = styled.div`
     }
     .brand{
         display: flex;
-        align-items: center;
+        align-items: end;
         justify-content: center;
         gap: 1rem;
-    }
-    h1{
-        text-transform: uppercase;
+        h1{
+            text-transform: uppercase;
+            color: #f8bb23;
+        }
     }
     form{
         display: flex;
@@ -122,18 +123,18 @@ const FormContainer = styled.div`
     input{
         background-color: transparent;
         padding: 1rem;
-        border: 0.1rem solid #4e0eff;
+        border: 0.1rem solid #fe9f03;
         border-radius: 0.4rem;
         width: 100%;
         color: white;
         font-size: 1rem;
     &:focus{
-        border: 0.1rem solid #997af0;
+        border: 0.1rem solid #fe5103;
         outline: none;
     }
 }
     button{
-        background-color: #997af0;
+        background-color: #fe9f03;
         color: white;
         padding: 1rem 2rem;
         border: none;
@@ -144,14 +145,14 @@ const FormContainer = styled.div`
         text-transform: uppercase;
         transition: 0.5s ease-in-out;
         &:hover{
-            background-color: #4e0eff;
+            background-color: #fe5103;
         }
     }
     span{
         color: white;
         text-transform: uppercase;
         a{
-            color: #4e0eff;
+            color: #f8bc23;
             text-decoration: none;
         }
     }
