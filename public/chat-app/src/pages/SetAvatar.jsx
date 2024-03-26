@@ -43,7 +43,6 @@ export const SetAvatar = () => {
             }
             setAvatars(data);
             setIsLoading(false);
-            setSelectedAvatar(undefined);
         })()
     }, [refresh]);
 
@@ -56,7 +55,6 @@ export const SetAvatar = () => {
             const {data} = await axios.post(`${setAvatarRoute}/${user._id}`, {
                 image: avatars[selectedAvatar],
             });
-            console.log(data);
             if(data.isSet){
                 user.isAvatarImageSet = true;
                 user.avatarImage = data.image;
