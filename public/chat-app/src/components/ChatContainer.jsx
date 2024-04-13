@@ -4,6 +4,7 @@ import Logout from "./Logout";
 import ChatInput from "./ChatInput";
 import axios from "axios";
 import { addMessageRoute, getMessagesRoute } from "../utils/APIRoutes";
+import {v4 as uuidv4} from "uuid";
 
 const ChatContainer = ({currentChat, currentUser, socket}) => {
     const [messages, setMessages] = useState([]);
@@ -57,9 +58,7 @@ const ChatContainer = ({currentChat, currentUser, socket}) => {
     },[arrivalMessage])
     useEffect(() => {
         if (scrollRef.current) {
-            scrollRef.current.scrollTo({ behavior: "smooth", top: scrollRef.current.scrollHeight });
-            console.log("How are you my friend.");
-            console.log(scrollRef.current);
+            scrollRef.current.scrollIntoView({behavior: "smooth"})
         }
         console.log("scrolling to the end.")
     }, [messages]);
@@ -76,11 +75,11 @@ const ChatContainer = ({currentChat, currentUser, socket}) => {
                 </div>
                 <Logout/>
             </div>
-            <div className="messages" ref={scrollRef}>
+            <div className="messages">
             {
                 messages.map((msg, index)=>{
                     return (
-                        <div key={index} className={`message ${msg.fromSelf ? "sended":"received"}`}>{msg.message}</div>
+                        <div key={uuidv4()} ref={scrollRef} className={`message ${msg.fromSelf ? "sended":"received"}`}>{msg.message}</div>
                     )
                 })
             }
