@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import Picker from "emoji-picker-react";
 import {IoMdSend} from "react-icons/io";
 import {BsEmojiSmileFill} from "react-icons/bs";
 
-const ChatInput = ({handleSendMsg}) => {
+const ChatInput = React.forwardRef(({handleSendMsg}, ref) => {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [msg, setMsg] = useState("");
 
@@ -29,7 +29,7 @@ const ChatInput = ({handleSendMsg}) => {
   }
     return (
         <Container>
-            <div className="button-container">
+            <div ref={ref} className="button-container">
                 <div className="emoji">
                     <BsEmojiSmileFill onClick={handleEmojiPickerShowHide}/>
                     {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick}/>}
@@ -41,7 +41,7 @@ const ChatInput = ({handleSendMsg}) => {
             </form>
         </Container>
     )
-}
+})
 
 export default ChatInput;
 
@@ -51,9 +51,10 @@ align-items: center;
 grid-template-columns: 5% 95%;
 background-color: #080420;
 padding: 0 2rem;
-@media screen and (min-width: 720px) and (max-width: 1080px) {
-  padding: 0.3rem 1rem;
-  gap: 1rem;
+@media only screen and (max-width: 1000px) {
+  .emoji{
+    right: 18px
+  }
 }
 .button-container {
   display: flex;

@@ -106,12 +106,14 @@ const Container = styled.div`
     .titleContainer{
         h1{
             color: #f8bb23;
+            text-align: center;
         }
     }
     .avatars{
         display: flex;
-        justify-conten: center;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 2rem;
         .avatar{
             display: flex;
@@ -151,6 +153,7 @@ const Container = styled.div`
         .refresh{
             background-color: transparent;
             border: none;
+            display: none;
             .refreshIcon{
                 color: #fe9f03;
                 transition: 0.5s ease-in-out;

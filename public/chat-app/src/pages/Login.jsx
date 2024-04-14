@@ -62,7 +62,7 @@ export default function Login() {
         <form onSubmit={(event) => handleSubmit(event)}>
             <div className="brand">
                 <img src={Logo} alt="logo Image" />
-                <h1>PineTalk</h1>
+                <h1>PineCHAT</h1>
             </div>
             <input type="text" name="username" placeholder="Username" onChange={(e) => handleChange(e)} />
             <input type="password" name="password" placeholder="Password" onChange={(e) => handleChange(e)} />
@@ -91,7 +91,6 @@ img{
     justify-content: center;
     gap: 1rem;
     h1{
-        text-transform: uppercase;
         color: #f8bb23;
     }
 }

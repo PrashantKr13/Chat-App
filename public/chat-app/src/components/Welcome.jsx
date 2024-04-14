@@ -9,7 +9,7 @@ const Welcome = ({currentUser}) => {
             <div className="logoutButton"><Logout /></div>
             <img src={Robot} alt="Robot" />
             <h1>Hello, <span>{currentUser.username}</span>!</h1>
-            <h2>Welcome to PINETALK</h2>
+            <h2>Welcome to PineCHAT</h2>
         </Container>
     );
 }

@@ -6,7 +6,7 @@ import axios from "axios";
 import { addMessageRoute, getMessagesRoute } from "../utils/APIRoutes";
 import {v4 as uuidv4} from "uuid";
 
-const ChatContainer = ({currentChat, currentUser, socket}) => {
+const ChatContainer = React.forwardRef(({currentChat, currentUser, socket}, ref) => {
     const [messages, setMessages] = useState([]);
     const [arrivalMessage, setArrivalMessage] = useState(null);
     const scrollRef = useRef();
@@ -60,7 +60,6 @@ const ChatContainer = ({currentChat, currentUser, socket}) => {
         if (scrollRef.current) {
             scrollRef.current.scrollIntoView({behavior: "smooth"})
         }
-        console.log("scrolling to the end.")
     }, [messages]);
     return (<>
         {currentChat && (<Container>
@@ -84,17 +83,23 @@ const ChatContainer = ({currentChat, currentUser, socket}) => {
                 })
             }
         </div>
-            <ChatInput handleSendMsg={handleSendMsg} />
+            <ChatInput ref={ref} handleSendMsg={handleSendMsg} />
         </Container>)}
         </>  
     )
-}
+})
 
 export default ChatContainer;
 
 const Container = styled.div`
     display: grid;
     grid-template-rows: 10% 80% 10%;
+    @media only screen and (max-width: 1000px){
+        min-height: 100%;
+        .messages{
+            max-height: 90vh !important;
+        }
+    }
     .messages{
         color: white;
     display: flex;

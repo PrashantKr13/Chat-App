@@ -26,7 +26,7 @@ const Contacts = ({contacts, currentUser, changeChat}) => {
                 <Container>
                     <div className="brand">
                         <img src={Logo} alt="Logo" />
-                        <h3>PINETALK</h3>
+                        <h3>PineCHAT</h3>
                     </div>
                     <div className="contacts">
                         {
@@ -61,6 +61,34 @@ const Container = styled.div`
     grid-template-rows: 12% 75% 13%;
     overflow: hidden;
     background-color: #080420;
+    @media only screen and (max-width: 1000px) {
+        overflow: visible;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+    @media only screen and (max-width: 1000px) {
+        .contacts{
+            display: flex !important;
+            flex-direction: row !important;
+            padding: 0rem 0.7rem;
+            overflow-x: auto;
+            gap: 0.8rem;
+
+            &::-webkit-scrollbar {
+                height: 0.4rem;
+            }
+    
+            &::-webkit-scrollbar-thumb {
+                border-radius: 0.1rem;
+            }
+        }
+        .contact{
+            margin-bottom: 0.5rem;
+        }
+        .currentUser{
+            display: none !important;
+        }
+      }
     .brand{
         display: flex;
         justify-content: center;
@@ -72,7 +100,6 @@ const Container = styled.div`
         }
         h3{
             color: #f8bb23;
-            text-transform: uppercase;
         }
     }
     .contacts{

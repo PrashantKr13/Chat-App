@@ -74,7 +74,7 @@ export default function Register() {
             <form onSubmit={(event) =>  handleSubmit(event) }>
                 <div className="brand">
                     <img src={Logo} alt="logo image" />
-                    <h1>PineTalk</h1>
+                    <h1>PineCHAT</h1>
                 </div>
                 <input type="text" name="username" placeholder="Username" onChange={(e) => handleChange(e)} />
                 <input type="text" name="email" placeholder="E-mail" onChange={(e) => handleChange(e)} />
@@ -108,7 +108,6 @@ const FormContainer = styled.div`
         justify-content: center;
         gap: 1rem;
         h1{
-            text-transform: uppercase;
             color: #f8bb23;
         }
     }
