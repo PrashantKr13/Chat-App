@@ -76,7 +76,7 @@ const ChatContainer = React.forwardRef(({currentChat, currentUser, socket}, ref)
             </div>
             <div className="messages">
             {
-                messages.map((msg, index)=>{
+                messages.map((msg)=>{
                     return (
                         <div key={uuidv4()} ref={scrollRef} className={`message ${msg.fromSelf ? "sended":"received"}`}>{msg.message}</div>
                     )

@@ -81,6 +81,9 @@ const Container = styled.div`
         display: grid;
         grid-template-columns: 25% 75%;
         overflow: auto;
+        &::-webkit-scrollbar{
+            width: 0.4rem;
+        }
     }
     @media only screen and (max-width: 1000px) {
         .container{
