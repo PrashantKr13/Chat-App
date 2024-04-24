@@ -60,7 +60,7 @@ const Container = styled.div`
     display: grid;
     grid-template-rows: 12% 75% 13%;
     overflow: hidden;
-    background-color: #080420;
+    background-color: #2c2a2a8a;
     @media only screen and (max-width: 1000px) {
         overflow: visible;
         grid-template-rows: auto;
@@ -125,9 +125,11 @@ const Container = styled.div`
             border-radius: 0.2rem;
             gap: 1rem;
             padding: 0.4rem;
-            background-color: #ffffff39;
+            background-color: #151515;
             color: #f8bb23;
             transition: 0.5s ease-in-out;
+            letter-spacing: 0.2rem;
+            font-size: 1.5rem;
             img{
                 height: 3rem;
             }
@@ -140,7 +142,7 @@ const Container = styled.div`
         }
     }
     .currentUser{
-        background-color: #0d0d30;
+        background-color: #7f7f7f;
         display: flex;
         justify-content: center;
         align-items: center;

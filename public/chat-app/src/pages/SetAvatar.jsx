@@ -102,7 +102,7 @@ const Container = styled.div`
     gap: 3rem;
     height: 100vh;
     width: 100vw;
-    background-color: #131324; 
+    background-color: black; 
     .titleContainer{
         h1{
             color: #f8bb23;

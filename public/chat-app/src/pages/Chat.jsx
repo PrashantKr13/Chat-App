@@ -73,9 +73,9 @@ const Container = styled.div`
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background-color: #131324;
+    background-color: black;
     .container{
-        background-color: #00000076;
+        background-color: #151515;
         height: 85vh;
         width: 85vw;
         display: grid;

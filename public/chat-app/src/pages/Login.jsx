@@ -80,7 +80,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 1rem;
-background-color: #131324;
+background-color: black;
 color: white;
 img{
     height: 5rem
@@ -98,7 +98,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: #151515;
     padding: 3rem 5rem;
     border-radius: 2rem;
 }
@@ -110,6 +110,7 @@ input{
     width: 100%;
     color: white;
     font-size: 1rem;
+    letter-spacing: 0.2rem;
 &:focus{
     border: 0.1rem solid #fe5103;
     outline: none;

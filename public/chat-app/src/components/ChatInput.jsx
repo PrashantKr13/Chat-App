@@ -49,7 +49,7 @@ const Container = styled.div`
 display: grid;
 align-items: center;
 grid-template-columns: 5% 95%;
-background-color: #080420;
+background-color: #222222;
 padding: 0 2rem;
 @media only screen and (max-width: 1000px) {
   .emoji{

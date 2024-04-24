@@ -126,8 +126,8 @@ const Container = styled.div`
     }
     .sended{
         align-self: end;
-        background-color: #9a86f3;
-        color: white;
+        background-color: #ffffff;
+        color: black;
     }
     .received{
         align-self: start;
@@ -138,6 +138,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: space-between;
         padding: 0.5rem;
+        background-color: #7f7f7f;
         .user-details{
             display: flex;
             align-items: center;
