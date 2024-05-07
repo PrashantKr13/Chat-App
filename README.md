@@ -9,6 +9,7 @@
 * **Emojis and Stickers:** Experiment with incorporating emojis and stickers into PineChat's messaging system, adding fun and expressiveness to conversations.
 
 <h3>Getting Started:</h3>
+
 * Navigate to public/chat-app
 * npm i
 * Navigate to server
