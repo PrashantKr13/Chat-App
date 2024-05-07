@@ -9,9 +9,9 @@
 * **Emojis and Stickers:** Experiment with incorporating emojis and stickers into PineChat's messaging system, adding fun and expressiveness to conversations.
 
 <h3>Getting Started:</h3>
-* '''
-npm i 
-'''
+* ```
+ npm i 
+ ```
 for the frontend and backend
 * Create a .env file for the server and make the following variables:
   - PORT = Port Address for the server //Eg: 2000, 4000,..etc
