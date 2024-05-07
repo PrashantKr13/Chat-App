@@ -129,7 +129,6 @@ const Container = styled.div`
             color: #f8bb23;
             transition: 0.5s ease-in-out;
             letter-spacing: 0.2rem;
-            font-size: 1.5rem;
             img{
                 height: 3rem;
             }

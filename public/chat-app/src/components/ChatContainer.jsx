@@ -130,6 +130,8 @@ const Container = styled.div`
         color: black;
     }
     .received{
+        background-color: #f8bb23;
+        color: black;
         align-self: start;
     }
     }
