@@ -9,11 +9,16 @@
 * **Emojis and Stickers:** Experiment with incorporating emojis and stickers into PineChat's messaging system, adding fun and expressiveness to conversations.
 
 <h3>Getting Started:</h3>
-* ```
- npm i 
- ```
-for the frontend and backend
+* Navigate to public/chat-app
+* npm i
+* Navigate to server
+* npm i
 * Create a .env file for the server and make the following variables:
   - PORT = Port Address for the server //Eg: 2000, 4000,..etc
   - MONGO_URL = "Your MONGO_DB URL"
   - REACT_URL = "http://localhost:3000" //Default address for React frontend
+* Create a .env file for the frontend and make the following variables:
+  - REACT_APP_Api_Route_HOST = Address_of_your_server
+  - REACT_APP_LOCALHOST_KEY = "app-user"
+* Run the server using "npm start"
+* Run the frontend using "npm start"
