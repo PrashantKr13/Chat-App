@@ -2,7 +2,7 @@
 <h2>A dynamic chatting website</h2>
 
 <h3>Preview:</h3>
-<img src="https://github.com/PrashantKr13/PineChat/assets/98947818/351207c5-9a92-4662-a500-bcaffca4c9fc" alt="Preview 1">
+<img src="https://github.com/PrashantKr13/PineChat/assets/98947818/351207c5-9a92-4662-a500-bcaffca4c9fc" alt="Preview 1" style={height="200px", width="400px"}>
 
 <h3>Features:</h3>
 
