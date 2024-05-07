@@ -1,5 +1,9 @@
 <h1>Welcome to PineCHAT</h1>
 <h2>A dynamic chatting website</h2>
+
+<h3>Preview:</h3>
+![Screenshot 2024-05-07 195725](https://github.com/PrashantKr13/PineChat/assets/98947818/34999114-b3ce-407e-9c72-59f057eaa7ca)
+
 <h3>Features:</h3>
 
 * **Authentication Implementation:** Explore how PineChat handles user authentication securely, allowing users to create accounts and log in using email addresses or social media credentials.
