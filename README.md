@@ -3,6 +3,9 @@
 
 <h3>Preview:</h3>
 <img src="https://github.com/PrashantKr13/PineChat/assets/98947818/351207c5-9a92-4662-a500-bcaffca4c9fc" alt="Preview 1" style={height="200px", width="400px"}>
+<img src="https://github.com/PrashantKr13/PineChat/assets/98947818/410f5959-ed67-4623-82e0-5fc97798f28e" alt="Preview 2" style={height="200px", width="400px"}>
+<img src="https://github.com/PrashantKr13/PineChat/assets/98947818/3a21d1c6-1e10-4417-9f41-3489bd0f2671" alt="Preview 3" style={height="200px", width="400px"}>
+<img src="https://github.com/PrashantKr13/PineChat/assets/98947818/0428f6e2-b4df-4586-90f8-e69c33ef61ca" alt="Preview 4" style={height="200px", width="400px"}>
 
 <h3>Features:</h3>
 
